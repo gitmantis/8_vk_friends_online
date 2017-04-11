@@ -8,7 +8,7 @@
 $python vk_friends_online.py
 
 #Пример вывода скрипта
-
+```
 $python vk_friends_online.py
 Login: user_email@gmail.com
 Password: passwordVK
@@ -16,7 +16,7 @@ Password: passwordVK
 Василий Васильев is online
 Сергей Сергеев is online
 Елена Еленина is online
-
+```
 # Цели проекта
 
 Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
