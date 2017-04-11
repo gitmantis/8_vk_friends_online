@@ -1,7 +1,23 @@
-# Watcher of Friends Online
+# Поиск VK-друзей, которые находятся в online
 
-[TODO. There will be project description]
+Скрипт vk_friends_online.py просит пользователя ввести свои учетные данные в сети VK.
+После выполнения, выводит список друзей пользователя, которые находятся в состоянии online.
 
-# Project Goals
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+# Как запустить
+$python vk_friends_online.py
+
+#Пример вывода скрипта
+
+$python vk_friends_online.py
+Login: user_email@gmail.com
+Password: passwordVK
+
+Василий Васильев is online
+Сергей Сергеев is online
+Елена Еленина is online
+
+# Цели проекта
+
+Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
+
