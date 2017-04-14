@@ -11,6 +11,8 @@ def get_user_login():
 def get_user_password():
     return(input("Password: "))
 
+def get_users(api,users_ids):
+    return api.users.get(user_ids=','.join(map(str,users_ids)))
 
 def get_online_friends(login, password):
     session = vk.AuthSession(
@@ -21,10 +23,9 @@ def get_online_friends(login, password):
     )
     api = vk.API(session)
     friends_online = api.friends.getOnline(online_mobile=1)
-    return {"online": api.users.get(user_ids=','.join(map(str,friends_online["online"]))), "online_mobile": api.users.get(user_ids=','.join(map(str,friends_online["online_mobile"])))}
+    return {"online": get_users(api,friends_online["online"]), "online_mobile": get_users(api,friends_online["online_mobile"])}
 
 def output_friends_to_console(friends_online):
-    pprint(friends_online)
     for friend in friends_online["online"]:
         print("%s %s is online" % (friend["first_name"], friend["last_name"]))
     for friend in friends_online["online_mobile"]:
